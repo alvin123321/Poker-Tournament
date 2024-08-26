@@ -1,0 +1,15 @@
+.top-banner {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid white;
+}
+
+.title {
+  font-size: 3vw;
+  letter-spacing: 80px;
+  display: inline-block;
+  margin-right: -80px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
