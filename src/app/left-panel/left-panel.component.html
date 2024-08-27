@@ -6,7 +6,7 @@
   <div class="list">
     <ng-container class="w-50" *ngFor="let player of playerList">
       <div
-        (click)="openConfirmModal()"
+        (click)="openConfirmModal(player.name)"
         class="d-flex w-50 item"
         *ngIf="player.status === 'active'"
       >
@@ -36,7 +36,6 @@
   </div>
 </div>
 
-
 <div
   class="modal fade"
   id="confirmModal"
@@ -45,7 +44,7 @@
   aria-hidden="true"
 >
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content modal-style">
       <div class="modal-header">
         <h5 class="modal-title" id="confirmModalLabel">{{ title }}</h5>
         <button
@@ -56,13 +55,49 @@
         ></button>
       </div>
       <div class="modal-body">
-        {{ message }}
+        <form>
+          <div class="mb-3 input-style">
+            <label for="inputField1" class="form-label">NAME</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              [(ngModel)]="name"
+              name="name"
+            />
+          </div>
+          <div class="mb-3 input-style">
+            <label for="inputField2" class="form-label">STATUS</label>
+            <input
+              type="text"
+              class="form-control"
+              id="status"
+              [(ngModel)]="status"
+              name="status"
+            />
+          </div>
+          
+          <div class="mb-3 input-style">
+            <label for="inputField3" class="form-label">PLACEMENT</label>
+            <input
+              type="text"
+              class="form-control"
+              id="placement"
+              [(ngModel)]="placement"
+              name="placement"
+            />
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cancel
         </button>
-        <button type="button" class="btn btn-primary" (click)="confirm()">
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="confirm(name, status, placement)"
+        >
           Confirm
         </button>
       </div>

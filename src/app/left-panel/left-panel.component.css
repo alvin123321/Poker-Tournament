@@ -40,3 +40,26 @@
   border: 0.1vw solid #ff4747;
   border-radius: 30%;
 }
+
+.modal-dialog {
+  top: 18vw;
+}
+
+label {
+  color: white;
+}
+
+input {
+  text-align: center;
+  font-size: 2vw;
+}
+
+.input-style {
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+}
+
+.modal-style {
+  background-color: #4d4e4f;
+}

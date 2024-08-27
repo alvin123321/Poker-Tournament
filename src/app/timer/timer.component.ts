@@ -45,19 +45,23 @@ export class TimerComponent implements OnInit {
     10000,
     10000,
     10000,
-    'break',
-    10000,
-    10000,
     10000,
     'break',
     10000,
     10000,
     10000,
+    10000,
+    'break',
+    10000,
+    10000,
+    10000,
+    10000,
     'break',
     10000,
     10000,
     10000,
-    'break',
+    10000,
+    'break'
   ];
 
   public bigBlind = [
