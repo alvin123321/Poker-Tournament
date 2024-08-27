@@ -1,1 +1,71 @@
-<p>left-panel works!</p>
+<div class="main d-flex flex-column">
+  <div class="d-flex">
+    <div class="margin">PLAYERS:</div>
+    <div class="active-player">{{ activePlayer }}/40</div>
+  </div>
+  <div class="list">
+    <ng-container class="w-50" *ngFor="let player of playerList">
+      <div
+        (click)="openConfirmModal()"
+        class="d-flex w-50 item"
+        *ngIf="player.status === 'active'"
+      >
+        <div class="team-symbol" [ngSwitch]="player.team">
+          <div class="red" *ngSwitchCase="'diamond'">♦︎</div>
+          <div class="red" *ngSwitchCase="'heart'">♥︎</div>
+          <div *ngSwitchCase="'club'">♣︎</div>
+          <div *ngSwitchCase="'spade'">♠︎</div>
+        </div>
+        {{ player.name }}
+      </div>
+    </ng-container>
+  </div>
+  <div class="divider"></div>
+  <div class="list">
+    <ng-container class="w-50" *ngFor="let player of playerList">
+      <div class="d-flex w-50 item" *ngIf="player.status === 'out'">
+        <div class="team-symbol" [ngSwitch]="player.team">
+          <div class="red" *ngSwitchCase="'diamond'">♦︎</div>
+          <div class="red" *ngSwitchCase="'heart'">♥︎</div>
+          <div *ngSwitchCase="'club'">♣︎</div>
+          <div *ngSwitchCase="'spade'">♠︎</div>
+        </div>
+        {{ player.name }}
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+
+<div
+  class="modal fade"
+  id="confirmModal"
+  tabindex="-1"
+  aria-labelledby="confirmModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmModalLabel">{{ title }}</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        {{ message }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancel
+        </button>
+        <button type="button" class="btn btn-primary" (click)="confirm()">
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

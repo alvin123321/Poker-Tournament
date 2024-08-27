@@ -11,3 +11,15 @@
 .app {
   overflow: hidden; /* Prevents content overflow */
 }
+
+.left-panel {
+  width: 17.5%;
+}
+
+.timer {
+  width: 65%;
+}
+
+.right-panel {
+  width: 17.5%;
+}

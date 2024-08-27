@@ -1,7 +1,17 @@
 <div class="main">
   <div class="info">
-    <div class="title">LEVEL 1</div>
-    <div class="sub-info">(50/100)</div>
+    <div *ngIf="smallBlind[currentLevel] !== 'break'" class="title">
+      LEVEL {{ currentLevel + 1 - breakTime }}
+    </div>
+    <div *ngIf="smallBlind[currentLevel] === 'break'" class="break">
+      🧻 🚬 🍻 BREAK 🍻 🚬 🧻
+    </div>
+    <div *ngIf="smallBlind[currentLevel] !== 'break'" class="sub-info">
+      ({{ smallBlind[currentLevel] }}/{{ bigBlind[currentLevel] }})
+    </div>
+    <div *ngIf="smallBlind[currentLevel] === 'break'" class="sub-info">
+      Please return in :
+    </div>
   </div>
   <span class="timer">
     {{ minutes.toString().padStart(2, "0") }}:{{
@@ -10,6 +20,11 @@
   </span>
   <div class="info">
     <div class="title">NEXT LEVEL</div>
-    <div class="sub-info">LEVEL 2 (100/200)</div>
+    <div *ngIf="smallBlind[currentLevel + 1] !== 'break'" class="sub-info">
+      ({{ smallBlind[currentLevel + 1] }}/{{ bigBlind[currentLevel + 1] }})
+    </div>
+    <div *ngIf="smallBlind[currentLevel + 1] === 'break'" class="sub-info">
+      🧻 🚬 🍻 BREAK 🍻 🚬 🧻
+    </div>
   </div>
 </div>

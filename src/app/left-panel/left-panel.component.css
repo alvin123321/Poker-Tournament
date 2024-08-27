@@ -1,0 +1,42 @@
+.main {
+  padding: 1vw;
+  padding-left: 3vw;
+  padding-top: 2vw;
+}
+.list {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.team-symbol {
+  margin-right: 0.8vw;
+  font-size: 1.1vw;
+}
+
+.red {
+  color: red;
+}
+
+.margin {
+  margin-right: 3vw;
+  margin-bottom: 1vw;
+  font-size: 1vw;
+  font-weight: 700;
+}
+
+.active-player {
+  color: #55ea55;
+}
+
+.divider {
+  margin-top: 1vw;
+  width: 75%;
+  border: 0.1vw solid #ff4747;
+  border-radius: 30%;
+}
