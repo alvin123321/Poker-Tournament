@@ -22,15 +22,15 @@ export class LeftPanelComponent implements OnInit {
   @Output() confirmed = new EventEmitter<{
     name: string;
     status: string;
-    placement: string;
+    placement: number;
   }>();
   name: string = '';
   status: string = '';
-  placement: string = '';
+  placement: number = 0;
+  sortedPlayerList: any;
 
   constructor(private playersService: PlayersService) {
     this.playerList = this.playersService.getPlayers();
-    console.log(this.playerList);
     this.activePlayer = this.playerList.filter(
       (player: any) => player.status === 'active'
     ).length;
@@ -41,17 +41,24 @@ export class LeftPanelComponent implements OnInit {
     // Initialization logic here
   }
 
-  confirm(name: string, status: string, placement: string) {
+  confirm(name: string, status: string, placement: number) {
     this.confirmed.emit();
     this.playersService.updatePlayerStatus(name, status, placement);
+    this.activePlayer = this.playerList.filter(
+      (player: any) => player.status === 'active'
+    ).length;
+    this.sortedPlayerList = this.getSortedPlayerList();
+
     this.hideModal();
   }
 
-  openConfirmModal(name:string) {
+  openConfirmModal(name: string, status: string) {
     const modalElement = document.getElementById('confirmModal');
     if (modalElement) {
       const modalInstance = new bootstrap.Modal(modalElement);
-      this.name = name
+      this.name = name;
+      this.status = status;
+      this.placement = this.activePlayer;
       modalInstance.show();
     }
   }
@@ -62,5 +69,14 @@ export class LeftPanelComponent implements OnInit {
       const modalInstance = bootstrap.Modal.getInstance(modalElement);
       modalInstance ? modalInstance.hide() : console.log('modal hide error');
     }
+  }
+
+  getSortedPlayerList() {
+    return this.playerList
+      .filter((player: { status: string }) => player.status === 'out')
+      .sort(
+        (a: { placement: number }, b: { placement: number }) =>
+          a.placement - b.placement
+      );
   }
 }

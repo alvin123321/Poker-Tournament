@@ -1,12 +1,12 @@
 <div class="main d-flex flex-column">
   <div class="d-flex">
     <div class="margin">PLAYERS:</div>
-    <div class="active-player">{{ activePlayer }}/40</div>
+    <div class="active-player">{{ activePlayer }}/{{ playerList.length }}</div>
   </div>
   <div class="list">
     <ng-container class="w-50" *ngFor="let player of playerList">
       <div
-        (click)="openConfirmModal(player.name)"
+        (click)="openConfirmModal(player.name, player.status)"
         class="d-flex w-50 item"
         *ngIf="player.status === 'active'"
       >
@@ -22,15 +22,15 @@
   </div>
   <div class="divider"></div>
   <div class="list">
-    <ng-container class="w-50" *ngFor="let player of playerList">
-      <div class="d-flex w-50 item" *ngIf="player.status === 'out'">
+    <ng-container class="w-50" *ngFor="let player of sortedPlayerList">
+      <div class="d-flex w-50 item">
         <div class="team-symbol" [ngSwitch]="player.team">
           <div class="red" *ngSwitchCase="'diamond'">♦︎</div>
           <div class="red" *ngSwitchCase="'heart'">♥︎</div>
           <div *ngSwitchCase="'club'">♣︎</div>
           <div *ngSwitchCase="'spade'">♠︎</div>
         </div>
-        {{ player.name }}
+        {{ player.name }} - {{ player.placement }}th
       </div>
     </ng-container>
   </div>
@@ -66,17 +66,18 @@
               name="name"
             />
           </div>
-          <div class="mb-3 input-style">
-            <label for="inputField2" class="form-label">STATUS</label>
-            <input
-              type="text"
-              class="form-control"
-              id="status"
+          <div class="mb-3">
+            <label for="statusField" class="form-label">Status</label>
+            <select
+              class="form-select"
+              id="statusField"
               [(ngModel)]="status"
               name="status"
-            />
+            >
+              <option value="active">Active</option>
+              <option value="out">Out</option>
+            </select>
           </div>
-          
           <div class="mb-3 input-style">
             <label for="inputField3" class="form-label">PLACEMENT</label>
             <input

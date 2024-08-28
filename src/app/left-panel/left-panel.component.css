@@ -1,6 +1,5 @@
 .main {
-  padding: 1vw;
-  padding-left: 3vw;
+  padding-left: 2vw;
   padding-top: 2vw;
 }
 .list {
@@ -12,6 +11,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .team-symbol {
@@ -42,7 +42,7 @@
 }
 
 .modal-dialog {
-  top: 18vw;
+  top: 13vw;
 }
 
 label {
@@ -52,6 +52,11 @@ label {
 input {
   text-align: center;
   font-size: 2vw;
+}
+
+select {
+  font-size: 2vw;
+  text-align: center;
 }
 
 .input-style {

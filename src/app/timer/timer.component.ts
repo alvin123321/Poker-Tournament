@@ -148,6 +148,6 @@ export class TimerComponent implements OnInit {
           }
         }
       }
-    }, 500);
+    }, 1000);
   }
 }

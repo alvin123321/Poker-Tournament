@@ -1,3 +1,26 @@
-.list {
+.main {
   display: flex;
+  flex-direction: column;
+}
+
+.prize-box {
+  background-color: #646464;
+  border-radius: 1vw;
+  height: 5vw;
+  text-align: center;
+  padding-top: 1vw;
+  font-size: 2vw;
+  margin-bottom: 1vw;
+  justify-content: space-around;
+}
+
+.gold {
+  color: #fbff00;
+}
+
+.silver {
+  color: #c4c4c4;
+}
+.copper {
+  color: #c57e24;
 }
