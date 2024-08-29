@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: "ink";
+  src: url(./assets/font/Osake.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "digital";
+  src: url(./assets/font/digital.ttf) format("truetype");
+}
 body {
   background-color: black;
   color: white; /* Optional: To make the text visible on the black background */

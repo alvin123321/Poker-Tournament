@@ -12,6 +12,8 @@
   align-items: center;
   cursor: pointer;
   font-weight: 700;
+  font-family: "digital";
+  letter-spacing: 0.2vw;
 }
 
 .team-symbol {
@@ -32,6 +34,10 @@
 
 .active-player {
   color: #55ea55;
+  margin-left: 4vw;
+  font-size: 2vw;
+
+  font-family: "digital";
 }
 
 .divider {

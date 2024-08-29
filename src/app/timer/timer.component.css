@@ -5,6 +5,7 @@
 }
 
 .timer {
+  font-family: "ink";
   margin-top: -5vw;
   font-size: 20vw;
   margin-bottom: -4vw;
@@ -15,11 +16,21 @@
   letter-spacing: 2vw;
 }
 
+.sub-info {
+  letter-spacing: 0.5vw;
+}
+
 .info {
   font-size: 4vw;
+  font-family: "ink";
 }
 
 .break {
-  font-size: 4.5vw;
+  font-size: 4vw;
+  color: #00ff71;
   margin-top: 0.1vw;
+}
+/* styles.css or component-specific CSS */
+.text-red {
+  color: red;
 }

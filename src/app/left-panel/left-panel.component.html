@@ -1,6 +1,5 @@
 <div class="main d-flex flex-column">
-  <div class="d-flex">
-    <div class="margin">PLAYERS:</div>
+  <div class="d-flex text-center">
     <div class="active-player">{{ activePlayer }}/{{ playerList.length }}</div>
   </div>
   <div class="list">
@@ -30,7 +29,7 @@
           <div *ngSwitchCase="'club'">♣︎</div>
           <div *ngSwitchCase="'spade'">♠︎</div>
         </div>
-        {{ player.name }} - {{ player.placement }}th
+        {{ player.name }}-{{ player.placement }}th
       </div>
     </ng-container>
   </div>

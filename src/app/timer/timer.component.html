@@ -9,11 +9,11 @@
     <div *ngIf="smallBlind[currentLevel] !== 'break'" class="sub-info">
       ({{ smallBlind[currentLevel] }}/{{ bigBlind[currentLevel] }})
     </div>
-    <div *ngIf="smallBlind[currentLevel] === 'break'" class="sub-info">
+    <div *ngIf="smallBlind[currentLevel] === 'break'" class="sub-info break">
       Please return in :
     </div>
   </div>
-  <span class="timer">
+  <span class="timer" [ngClass]="{ 'text-red': minutes < 1 }">
     {{ minutes.toString().padStart(2, "0") }}:{{
       seconds.toString().padStart(2, "0")
     }}
@@ -23,7 +23,10 @@
     <div *ngIf="smallBlind[currentLevel + 1] !== 'break'" class="sub-info">
       ({{ smallBlind[currentLevel + 1] }}/{{ bigBlind[currentLevel + 1] }})
     </div>
-    <div *ngIf="smallBlind[currentLevel + 1] === 'break'" class="sub-info">
+    <div
+      *ngIf="smallBlind[currentLevel + 1] === 'break'"
+      class="sub-info break"
+    >
       🧻 🚬 🍻 BREAK 🍻 🚬 🧻
     </div>
   </div>
