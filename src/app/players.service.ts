@@ -23,7 +23,7 @@ export class PlayersService {
     },
     {
       team: 'heart',
-      name: 'Zac',
+      name: 'Fish Z🦈',
       placement: '',
       status: 'active',
       ko: 0,
@@ -71,7 +71,7 @@ export class PlayersService {
     },
     {
       team: 'club',
-      name: 'Jason',
+      name: '上面是魚🎣',
       placement: '',
       status: 'active',
       ko: 0,
@@ -143,7 +143,7 @@ export class PlayersService {
     },
     {
       team: 'heart',
-      name: 'RBC',
+      name: 'RBC 👻',
       placement: '',
       status: 'active',
       ko: 0,
@@ -191,7 +191,7 @@ export class PlayersService {
     },
     {
       team: 'club',
-      name: 'Derek',
+      name: 'Derrik',
       placement: '',
       status: 'active',
       ko: 0,
@@ -231,7 +231,7 @@ export class PlayersService {
     },
     {
       team: 'club',
-      name: 'Jeff',
+      name: 'Luca.K',
       placement: '',
       status: 'active',
       ko: 0,
@@ -278,8 +278,8 @@ export class PlayersService {
       eliminateRound: 0,
     },
     {
-      team: 'heart',
-      name: 'Rick',
+      team: 'spade',
+      name: 'Kenny.K',
       placement: '',
       status: 'active',
       ko: 0,
@@ -287,15 +287,7 @@ export class PlayersService {
     },
     {
       team: 'spade',
-      name: 'Kenny',
-      placement: '',
-      status: 'active',
-      ko: 0,
-      eliminateRound: 0,
-    },
-    {
-      team: 'spade',
-      name: 'Benny',
+      name: 'Benny.K',
       placement: '',
       status: 'active',
       ko: 0,
@@ -303,7 +295,7 @@ export class PlayersService {
     },
     {
       team: 'heart',
-      name: 'Raymond',
+      name: 'Raymond.K',
       placement: '',
       status: 'active',
       ko: 0,

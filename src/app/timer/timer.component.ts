@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common'; // Import this to use ngFor
   styleUrl: './timer.component.css',
 })
 export class TimerComponent implements OnInit {
-  public minutes: number = 15;
+  public minutes: number = 1;
   public seconds: number = 0;
   public currentLevel: number = 0;
   public breakTime: number = 0;
@@ -139,7 +139,7 @@ export class TimerComponent implements OnInit {
         if (this.seconds < 0) {
           if (this.minutes > 0) {
             this.minutes--;
-            this.seconds = 59;
+            this.seconds = 5;
           } else {
             {
               if (this.smallBlind[this.currentLevel + 1] === 'break') {
