@@ -1,22 +1,94 @@
 <div class="main">
-  <div class="prize-box w-100 d-flex flex-row gold">
+  <div
+    (click)="openConfirmModal('first')"
+    class="prize-box w-100 d-flex flex-row gold"
+  >
     <div>🏆</div>
-    <div>$5,625</div>
+    <div *ngIf="prizes.first == 0">-------</div>
+    <div *ngIf="prizes.first > 0">$ {{ prizes.first | number: "1.0-0" }}</div>
   </div>
-  <div class="prize-box w-100 d-flex flex-row silver">
+  <div
+    (click)="openConfirmModal('second')"
+    class="prize-box w-100 d-flex flex-row silver"
+  >
     <div>🥈</div>
-    <div>-------</div>
+    <div *ngIf="prizes.second == 0">-------</div>
+    <div *ngIf="prizes.second > 0">$ {{ prizes.second | number: "1.0-0" }}</div>
   </div>
-  <div class="prize-box w-100 d-flex flex-row copper">
+  <div
+    (click)="openConfirmModal('third')"
+    class="prize-box w-100 d-flex flex-row copper"
+  >
     <div>🥉</div>
-    <div>-------</div>
+    <div *ngIf="prizes.third == 0">-------</div>
+    <div *ngIf="prizes.third > 0">$ {{ prizes.third | number: "1.0-0" }}</div>
   </div>
-  <div class="prize-box w-100 d-flex flex-row">
+  <div
+    (click)="openConfirmModal('fourth')"
+    class="prize-box w-100 d-flex flex-row"
+  >
     <div>4th</div>
-    <div>-------</div>
+    <div *ngIf="prizes.fourth == 0">-------</div>
+    <div *ngIf="prizes.fourth > 0">$ {{ prizes.fourth | number: "1.0-0" }}</div>
   </div>
-  <div class="prize-box w-100 d-flex flex-row">
+  <div
+    (click)="openConfirmModal('fifth')"
+    class="prize-box w-100 d-flex flex-row"
+  >
     <div>5th</div>
-    <div>-------</div>
+    <div *ngIf="prizes.fifth == 0">-------</div>
+    <div *ngIf="prizes.fifth > 0">$ {{ prizes.fifth | number: "1.0-0" }}</div>
+  </div>
+  <div
+    (click)="openConfirmModal('sixth')"
+    class="prize-box w-100 d-flex flex-row"
+  >
+    <div>6th</div>
+    <div *ngIf="prizes.sixth == 0">-------</div>
+    <div *ngIf="prizes.sixth > 0">$ {{ prizes.sixth | number: "1.0-0" }}</div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="prizeModal"
+  tabindex="-1"
+  aria-labelledby="confirmModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content modal-style">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmModalLabel">Prize</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3 input-style">
+            <label for="inputField1" class="form-label">AMOUNT</label>
+            <input
+              type="text"
+              class="form-control"
+              id="amount"
+              [(ngModel)]="amount"
+              name="amount"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancel
+        </button>
+        <button type="button" class="btn btn-primary" (click)="confirm(amount)">
+          Confirm
+        </button>
+      </div>
+    </div>
   </div>
 </div>

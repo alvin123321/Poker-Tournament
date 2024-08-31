@@ -17,7 +17,7 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
 export class LeftPanelComponent implements OnInit {
   public playerList: any;
   public activePlayer: any;
-  @Input() title: string = 'Confirm Action';
+  @Input() title: string = 'Player Information';
   @Input() message: string = 'Are you sure you want to proceed?';
   @Output() confirmed = new EventEmitter<{
     name: string;
