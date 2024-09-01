@@ -30,7 +30,7 @@ export class PlayersService {
       eliminateRound: 0,
     },
     {
-      team: 'club',
+      team: 'heart',
       name: 'Yoyo',
       placement: '',
       status: 'active',
@@ -38,7 +38,7 @@ export class PlayersService {
       eliminateRound: 0,
     },
     {
-      team: 'heart',
+      team: 'club',
       name: 'Crystal',
       placement: '',
       status: 'active',
@@ -46,7 +46,7 @@ export class PlayersService {
       eliminateRound: 0,
     },
     {
-      team: 'spade',
+      team: 'diamond',
       name: 'Dana',
       placement: '',
       status: 'active',
@@ -102,7 +102,7 @@ export class PlayersService {
       eliminateRound: 0,
     },
     {
-      team: 'heart',
+      team: 'spade',
       name: 'Philip',
       placement: '',
       status: 'active',
@@ -110,7 +110,7 @@ export class PlayersService {
       eliminateRound: 0,
     },
     {
-      team: 'club',
+      team: 'heart',
       name: 'Vincent',
       placement: '',
       status: 'active',
@@ -118,7 +118,7 @@ export class PlayersService {
       eliminateRound: 0,
     },
     {
-      team: 'heart',
+      team: 'club',
       name: 'Joanna',
       placement: '',
       status: 'active',
@@ -134,7 +134,7 @@ export class PlayersService {
       eliminateRound: 0,
     },
     {
-      team: 'spade',
+      team: 'heart',
       name: 'Ricky 1010',
       placement: '',
       status: 'active',
@@ -142,7 +142,7 @@ export class PlayersService {
       eliminateRound: 0,
     },
     {
-      team: 'heart',
+      team: 'spade',
       name: 'RBC 👻',
       placement: '',
       status: 'active',
@@ -182,7 +182,7 @@ export class PlayersService {
       eliminateRound: 0,
     },
     {
-      team: 'heart',
+      team: 'spade',
       name: 'William',
       placement: '',
       status: 'active',
@@ -230,7 +230,7 @@ export class PlayersService {
       eliminateRound: 0,
     },
     {
-      team: 'club',
+      team: 'spade',
       name: 'Luca.K',
       placement: '',
       status: 'active',
@@ -246,7 +246,7 @@ export class PlayersService {
       eliminateRound: 0,
     },
     {
-      team: 'diamond',
+      team: 'heart',
       name: 'Nick',
       placement: '',
       status: 'active',
@@ -262,7 +262,7 @@ export class PlayersService {
       eliminateRound: 0,
     },
     {
-      team: 'heart',
+      team: 'spade',
       name: '台北汗濕',
       placement: '',
       status: 'active',
@@ -278,7 +278,7 @@ export class PlayersService {
       eliminateRound: 0,
     },
     {
-      team: 'spade',
+      team: 'heart',
       name: 'Kenny.K',
       placement: '',
       status: 'active',
@@ -303,7 +303,15 @@ export class PlayersService {
     },
     {
       team: 'club',
-      name: 'Tony',
+      name: 'Tony.Y',
+      placement: '',
+      status: 'active',
+      ko: 0,
+      eliminateRound: 0,
+    },
+    {
+      team: 'spade',
+      name: 'Jeff',
       placement: '',
       status: 'active',
       ko: 0,
